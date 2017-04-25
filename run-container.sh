@@ -17,12 +17,12 @@ DB_CONTAINER_PATH=/var/lib/postgresql/data
 mkdir -p $DB_LOCAL_PATH
 
 docker run \
-	   --name $CONTAINER_NAME \
-	   --restart always \
-	   -e POSTGRES_PASSWORD=xxxxxxxx \
-	   -e POSTGRES_USER=appuser \
-	   -e POSTGRES_DB=$POSTGRES_DB \
-	   -e PGDATA=$DB_CONTAINER_PATH/pgdata \
-	   -v $DB_LOCAL_PATH:$DB_CONTAINER_PATH \
-	   -d \
-	   postgres:$POSTGRES_VERSION
+       --name $CONTAINER_NAME \
+       --restart always \
+       -e POSTGRES_PASSWORD=xxxxxxxx \
+       -e POSTGRES_USER=appuser \
+       -e POSTGRES_DB=$POSTGRES_DB \
+       -e PGDATA=$DB_CONTAINER_PATH/pgdata \
+       -v $DB_LOCAL_PATH:$DB_CONTAINER_PATH \
+       -d \
+       postgres:$POSTGRES_VERSION

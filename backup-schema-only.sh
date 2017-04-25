@@ -1,11 +1,11 @@
 #! /bin/sh -e
 
 docker exec \
-	   -i \
+       -i \
        subd \
        pg_dump \
        --schema-only \
        --no-privileges \
        --no-owner \
-	   -U appuser \
-	   appdb > dumps/schema-only.sql
+       -U appuser \
+       appdb > dumps/schema-only.sql

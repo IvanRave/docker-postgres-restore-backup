@@ -4,10 +4,10 @@ DUMPS="$PWD"/dumps
 mkdir -p $DUMPS
 
 docker exec \
-	   -i \
+       -i \
        subd \
        pg_dump \
        --no-privileges \
        --no-owner \
-	   -U appuser \
-	   appdb > $DUMPS/data.sql
+       -U appuser \
+       appdb > $DUMPS/data.sql

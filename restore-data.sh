@@ -7,10 +7,10 @@ DUMPS="$PWD"/dumps
 mkdir -p $DUMPS
 
 docker exec \
-	   -i \
+       -i \
        subd \
        psql \
-	   --single-transaction \
-	   --set ON_ERROR_STOP=on \
-	   -U appuser \
-	   appdb < $DUMPS/data.sql
+       --single-transaction \
+       --set ON_ERROR_STOP=on \
+       -U appuser \
+       appdb < $DUMPS/data.sql
