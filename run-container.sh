@@ -16,9 +16,12 @@ DB_CONTAINER_PATH=/var/lib/postgresql/data
 
 mkdir -p $DB_LOCAL_PATH
 
+# docker network create appnet
+
 docker run \
        --name $CONTAINER_NAME \
        --restart always \
+       --network appnet \
        -e POSTGRES_PASSWORD=xxxxxxxx \
        -e POSTGRES_USER=appuser \
        -e POSTGRES_DB=$POSTGRES_DB \
